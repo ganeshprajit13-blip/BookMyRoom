@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Automated Municipal Library E-Book Licensing - Clean Academic UI Styles
+   ========================================================================== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --sidebar-bg: #1e293b;
+    --sidebar-hover: #334155;
+    --sidebar-active: #2563eb;
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --info: #0284c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    color: #f8fafc;
+    flex-shrink: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-brand {
+    padding: 20px 18px;
+    background-color: #0f172a;
+    border-bottom: 1px solid #334155;
+}
+
+.sidebar-brand h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-brand small {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    display: block;
+    margin-top: 4px;
+}
+
+.sidebar-menu {
+    padding: 12px 8px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-menu .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 3px;
+    color: #cbd5e1;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-menu .nav-link i {
+    font-size: 1.05rem;
+    width: 20px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.sidebar-menu .nav-link:hover {
+    background-color: var(--sidebar-hover);
+    color: #ffffff;
+}
+
+.sidebar-menu .nav-link:hover i {
+    color: #ffffff;
+}
+
+.sidebar-menu .nav-link.active {
+    background-color: var(--sidebar-active);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sidebar-menu .nav-link.active i {
+    color: #ffffff;
+}
+
+/* Main Content Area */
+#main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: var(--bg-light);
+}
+
+.top-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.content-body {
+    padding: 24px 28px;
+    flex: 1;
+}
+
+/* Simple Stat Cards */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card .stat-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-card .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 6px;
+}
+
+.stat-card.stat-primary .stat-value { color: var(--primary); }
+.stat-card.stat-success .stat-value { color: var(--success); }
+.stat-card.stat-warning .stat-value { color: var(--warning); }
+.stat-card.stat-danger .stat-value { color: var(--danger); }
+.stat-card.stat-info .stat-value { color: var(--info); }
+
+/* Simple Clean Panels */
+.simple-panel {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.simple-panel .panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border-radius: 8px 8px 0 0;
+}
+
+.simple-panel .panel-header h5 {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.simple-panel .panel-body {
+    padding: 20px;
+}
+
+/* Clean Tables */
+.table {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+}
+
+.table th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 11px 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border);
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Badges */
+.badge-status {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.badge-active { background-color: #dcfce7; color: #166534; }
+.badge-returned { background-color: #e2e8f0; color: #475569; }
+.badge-expired { background-color: #fee2e2; color: #991b1b; }
+.badge-waiting { background-color: #fef3c7; color: #92400e; }
+.badge-fulfilled { background-color: #e0f2fe; color: #075985; }
+.badge-cancelled { background-color: #f1f5f9; color: #64748b; }
+.badge-posted { background-color: #dcfce7; color: #166534; }
+.badge-paid { background-color: #dcfce7; color: #166534; }
+.badge-partially-paid { background-color: #fef3c7; color: #92400e; }
+
+/* Action Buttons */
+.btn-sm {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* Toast Notifications */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast-msg {
+    min-width: 280px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast-success { background-color: #15803d; }
+.toast-error { background-color: #b91c1c; }
+.toast-info { background-color: #0369a1; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #sidebar {
+        width: 70px;
+    }
+    .sidebar-brand h5 span, .sidebar-brand small, .sidebar-menu .nav-link span {
+        display: none;
+    }
+    .sidebar-menu .nav-link {
+        justify-content: center;
+        padding: 12px;
+    }
+}
